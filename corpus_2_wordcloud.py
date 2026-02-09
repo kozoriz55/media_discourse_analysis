@@ -13,12 +13,12 @@ def split_chinese_text(text, dictionary):
 			i += 1
 	return ''.join(w if w.upper() in SYMBOLS and next_w.upper() in SYMBOLS else w + " " for w, next_w in zip(words, words[1:]))
 
-with open("C:\\Users\\davin\\Desktop\\wangyi_corpus.txt", 'rt', encoding='utf-8') as f1:
+with open("C:\\Users\\ ... \\Desktop\\wangyi_corpus.txt", 'rt', encoding='utf-8') as f1:
 	chinese_text = f1.read()
-with open("C:\\Users\\davin\\Desktop\\zh_orpho.txt", 'rt', encoding='utf-8') as f:
+with open("C:\\Users\\ ... \\Desktop\\zh_orpho.txt", 'rt', encoding='utf-8') as f:
 	chinese_dictionary = {word.split('+')[0] for word in f.readlines()}
 chinese_words = split_chinese_text(chinese_text, chinese_dictionary)
-with open("C:\\Users\\davin\\Desktop\\wangyi_corpus_sep.txt", 'wt', encoding='utf-8') as f2:
+with open("C:\\Users\\ ... \\Desktop\\wangyi_corpus_sep.txt", 'wt', encoding='utf-8') as f2:
 	f2.write(chinese_words)
 print("файл успішно записаний")
 # Видалення стоп-слів
@@ -39,3 +39,4 @@ plt.title("Хмара слів з корпусу 'Wangyi_news'", fontsize=14)
 plt.show()
 #замінити в C:\Users\davin\AppData\Local\Programs\Python\Python311\Lib\site-packages\wordcloud\wordcloud.py
 #return np.asarray(self.to_image(), copy=copy) на return np.asarray(self.to_image())
+
