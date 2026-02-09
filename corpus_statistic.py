@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 CHINESE_RE = re.compile(r"^[\u4e00-\u9fff]+$")
 # ===== Зчитування корпусу =====
-with open("C:\\Users\\davin\\Desktop\\wangyi_corpus.txt", "r", encoding="utf-8") as f:
+with open("C:\\Users\\ ... \\Desktop\\wangyi_corpus.txt", "r", encoding="utf-8") as f:
     text = f.read()
 # ===== 1. Речення =====
 sentences = [s.strip() for s in re.split(r"[。！？]", text) if s.strip()]
@@ -71,7 +71,7 @@ plt.ylabel("Number of words")
 plt.show()
 # ===== Збереження словника в Excel і CSV =====
 df = pd.DataFrame(items_list, columns=["term", "frequency"])
-df.to_excel("C:\\Users\\davin\\Desktop\\frequency_dictionary.xlsx", index=False)
+df.to_excel("C:\\Users\\davin\\ ... \\frequency_dictionary.xlsx", index=False)
 #df.to_csv("C:\\Users\\davin\\Desktop\\frequency_dictionary.csv", index=False, encoding="utf-8-sig")
 print("\nФайл частотного словника збережено в Excel!")
 
@@ -82,7 +82,7 @@ pos_tokens = [(w, flag) for w, flag in pseg.cut(text) if CHINESE_RE.match(w)]
 words = [w for w, _ in pos_tokens]
 pos_tags = [flag for _, flag in pos_tokens]
 
-OUTPUT_PATH = "C:\\Users\\davin\\Desktop\\wangyi_corpus_analysis.xlsx"
+OUTPUT_PATH = "C:\\Users\\ ... \\Desktop\\wangyi_corpus_analysis.xlsx"
 with pd.ExcelWriter(OUTPUT_PATH, engine="xlsxwriter") as writer:
 	# ===== 10. Corpus-level statistics =====
 	corpus_stats = pd.DataFrame([["Characters", len(text)],["Tokens", num_tokens],["Sentences", num_sentences],["Types", len(types)],["TTR", round(ttr, 4)],["ASL", round(asl, 2)]],columns=["metric", "value"])
