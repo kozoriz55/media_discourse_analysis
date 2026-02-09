@@ -11,7 +11,7 @@ HEADERS = {
 	"Accept": "application/json, text/javascript, */*; q=0.01",
 	"Referer": "https://www.news.cn/",
 	"X-Requested-With": "XMLHttpRequest",
-	"Cookie": "wdcid=041658245ead40b9; xinhuatoken=news; wdlast=1767717323" #додати свіжі кукіс
+	"Cookie": "wdcid=041658; xinhuatoken=news; wdlast=17677" #додати свіжі кукіс
 }
 
 def fetch_news_page(keyword, page=1):
@@ -66,7 +66,7 @@ def extract_article_text(url):
 
 def main():
 	keyword = "王毅"   # пошукове слово
-	filename = f"C:\\Users\\davin\\Desktop\\{keyword}_news_xinhua.csv"
+	filename = f"C:\\Users\\...\\Desktop\\{keyword}_news_xinhua.csv"
 
 	first_page = fetch_news_page(keyword, 1)
 	if not first_page:
@@ -110,3 +110,4 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
