@@ -71,8 +71,8 @@ plt.ylabel("Number of words")
 plt.show()
 # ===== Збереження словника в Excel і CSV =====
 df = pd.DataFrame(items_list, columns=["term", "frequency"])
-df.to_excel("C:\\Users\\davin\\ ... \\frequency_dictionary.xlsx", index=False)
-#df.to_csv("C:\\Users\\davin\\Desktop\\frequency_dictionary.csv", index=False, encoding="utf-8-sig")
+df.to_excel("C:\\Users\\ ... \\Desktop\\frequency_dictionary.xlsx", index=False)
+#df.to_csv("C:\\Users\\ ... \\Desktop\\frequency_dictionary.csv", index=False, encoding="utf-8-sig")
 print("\nФайл частотного словника збережено в Excel!")
 
 # ===== 9. POS-токенізація =====
